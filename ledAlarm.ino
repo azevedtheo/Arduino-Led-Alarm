@@ -18,9 +18,9 @@ void setup() {
 
   // Set up sensor and buzzer pins
   pinMode(trigPin,
-                  OUTPUT);
+                        OUTPUT);
   pinMode(echoPin,
-                  INPUT);
+                        INPUT);
   pinMode(distanceAlarm,
                         OUTPUT);
 
@@ -135,3 +135,4 @@ void triggerAlarm(){
      noTone(distanceAlarm);    delay(200);
 
 }
+
