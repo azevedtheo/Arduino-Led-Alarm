@@ -102,12 +102,13 @@ void handleTurnSignals(){
     digitalWrite(turnRightSignal,
                                 LOW);   delay(200);
   }
-  if (ThereIsASwitchOn == true    &&
-                                    swActivateR == LOW)
-                                    {
-                                      digitalWrite(turnRightSignal,
+  if (ThereIsASwitchOn    ==    true    &&
+                                          swActivateR == LOW)
+                                          {
+                                            digitalWrite(turnRightSignal,
                                                                   LOW);
-                                    }
+                                            ThereIsASwitchOn = false;
+                                          }
 
   // LEFT SIDE SWITCH
   if (swActivateL   ==    HIGH)
@@ -122,10 +123,11 @@ void handleTurnSignals(){
   }
   if (ThereIsASwitchOn    ==    true    &&
                                           swActivateL   ==    LOW)
-  {
-    digitalWrite(turnLeftSignal,
-                                LOW);
-    }
+                                          {
+                                            digitalWrite(turnLeftSignal,
+                                                                        LOW);
+                                            ThereIsASwitchOn = false;
+                                          }
 }
 
 void triggerAlarm(){
@@ -135,5 +137,4 @@ void triggerAlarm(){
      noTone(distanceAlarm);    delay(200);
 
 }
-
 
